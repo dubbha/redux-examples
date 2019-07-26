@@ -9,11 +9,11 @@ export const UseStateManyStates = () => {
     { text: 'Spread the News' },
   ]);
 
-  const [todo, setTodo] = useState('');
+  const [newTodo, setNewTodo] = useState('');
 
   const handleAddTodo = () => {
-    setTodos([...todos, { text: todo }]);
-    setTodo('');
+    setTodos([...todos, { text: newTodo }]);
+    setNewTodo('');
   }
 
   return (
@@ -32,8 +32,8 @@ export const UseStateManyStates = () => {
           <textarea value={todos.map(t => t.text).join('\n')} readOnly />
         </div>
         <div>
-          <input type="text" value={todo} onChange={e => setTodo(e.target.value)} style={{ width: '40vw', marginLeft: '20vw' }}/>
-          <button onClick={handleAddTodo} style={{ width: '10vw' }}>Add</button>
+          <input type="text" value={newTodo} onChange={e => setNewTodo(e.target.value)} style={{ width: '40vw', marginLeft: '20vw' }}/>
+          <button onClick={handleAddTodo} disabled={!newTodo} style={{ width: '10vw' }}>Add</button>
         </div>
       </div>
     </>

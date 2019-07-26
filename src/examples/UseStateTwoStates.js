@@ -6,8 +6,14 @@ export const UseStateTwoStates = () => {
 
   return (
     <>
-      <div>Count #1: <button onClick={() => setCount(count + 1)} >{count}</button></div>
-      <div>Count #2: <button onClick={() => setCount2(count2 + 1)} >{count2}</button></div>
+      <div>
+        <label>Count #1: </label>
+        <button onClick={() => setCount(count + 1)} >{count}</button>
+      </div>
+      <div>
+        <label>Count #2: </label>
+        <button onClick={() => setCount2(count2 + 1)} >{count2}</button>
+      </div>
     </>
   )
 };

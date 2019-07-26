@@ -17,7 +17,7 @@ export const UseStateLazyInitialState = () => {
   return (
     <div>
       <label>Count #1: </label>
-      <button onClick={() => setCount(count+1)} >
+      <button onClick={() => setCount(count+1)}  className="heavy">
         {count}
       </button>
     </div>

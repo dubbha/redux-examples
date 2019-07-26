@@ -6,11 +6,12 @@
 
 a { display: block }
 
-button { width: 25vh; font-size: inherit; height: inherit; line-height: inherit; box-sizing: border-box; outline: none; border: 3px solid gray }
-button:active { border: 3px solid orange }
+button { width: 25vh; font-size: inherit; height: inherit; line-height: inherit; box-sizing: border-box; outline: none; border: 1px solid gray }
+button.heavy { border: 3px solid gray }
+button.heavy:active { border: 3px solid orange }
 
-input { width: 50vw; font-size: inherit; height: inherit; line-height: inherit; box-sizing: border-box; outline: none; }
+input { width: 50vw; font-size: inherit; height: inherit; line-height: inherit; box-sizing: border-box; outline: none; border: 1px solid gray }
 
-textarea { width: 50vw; min-height: 30vh; vertical-align: top; font-size: inherit; height: inherit; line-height: inherit; box-sizing: border-box; outline: none; }
+textarea { width: 50vw; min-height: 30vh; vertical-align: top; font-size: inherit; height: inherit; line-height: inherit; box-sizing: border-box; outline: none; border: 1px solid gray }
 
 label { display: inline-block; width: 20vw; box-sizing: border-box; outline: none }

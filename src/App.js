@@ -7,7 +7,6 @@ const routes = Object.keys(examples).map(name => ({
   path: `${name[0].toLowerCase()}${name.slice(1).replace(/([A-Z])/g, '-$1').toLowerCase()}`,
   name
 }));
-console.log(routes);
 
 const Home = () => {
   return (

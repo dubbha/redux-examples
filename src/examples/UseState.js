@@ -5,7 +5,7 @@ export const UseState = () => {
 
   return (
     <div>
-      <label>Count #1: </label>
+      <label>Count: </label>
       <button onClick={() => setCount(count+1)} >
         {count}
       </button>
