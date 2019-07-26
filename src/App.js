@@ -1,24 +1,30 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { Example } from './examples'
+import * as examples from './examples'
 import './App.css';
+
+const routes = Object.keys(examples).map(name => ({
+  path: `${name[0].toLowerCase()}${name.slice(1).replace(/([A-Z])/g, '-$1').toLowerCase()}`,
+  name
+}));
+console.log(routes);
 
 const Home = () => {
   return (
     <>
-      <Link to="/example">Example</Link>
+      {routes.map(r => <Link key={r.path} to={`/${r.path}`}>{r.name}</Link>)}
     </>
   );
 }
 
 const App = () => {
   return (
-    <Router>
-      <div className="App">
-        <Route path="/example" component={Example} />
+    <div className="App">
+      <Router>
+        {routes.map(r => <Route key={r.path} path={`/${r.path}`} component={examples[r.name]} />)}
         <Route path="/" exact component={Home} />
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 }
 
