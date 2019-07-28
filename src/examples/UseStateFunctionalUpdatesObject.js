@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useState } from 'react';
 
 export const UseStateFunctionalUpdatesObject = () => {
@@ -8,15 +9,9 @@ export const UseStateFunctionalUpdatesObject = () => {
 
   return (
     <>
-      <div>
-        <span style={{ position: 'absolute', top: pos.top, left: pos.left, transform: 'scale(-1, 1)', fontSize: '2em' }} role="img" aria-label="ghost">
-          👻
-        </span>
-      </div>
-      <div style={{ position: 'absolute', top: 0, right: 0 }}>
-        {JSON.stringify(pos)}
-      </div>
-      <div style={{ position: 'absolute', bottom: 0, right: 0 }}>
+      <span style={{ top: pos.top, left: pos.left }}> 🐠 </span>
+      <aside>{`Position: ${JSON.stringify(pos)}`}</aside>
+      <footer>
         <button onClick={() => setPos(
           prevPos => (
             {
@@ -29,7 +24,7 @@ export const UseStateFunctionalUpdatesObject = () => {
         <button onClick={() => setPos(prevPos => ({ ...prevPos, left: prevPos.left - 10  }))} > {'<'} </button>
         <button onClick={() => setPos(prevPos => ({ ...prevPos, top: prevPos.top + 10  }))} > {'v'} </button>
         <button onClick={() => setPos(prevPos => ({ ...prevPos, top: prevPos.top - 10  }))} > {'^'} </button>
-      </div>
+      </footer>
     </>
   )
 };

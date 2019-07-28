@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useState } from 'react';
 
 export const UseStateFunctionalUpdatesObject3 = () => {
@@ -14,15 +15,13 @@ export const UseStateFunctionalUpdatesObject3 = () => {
 
   return (
     <>
-      <div>
-        <span style={{ position: 'absolute', top: pos.y, left: pos.x, transform: 'scale(-1, 1)', fontSize: `${2*zoom}em` }} role="img" aria-label="ghost">
-          👻
-        </span>
-      </div>
-      <div style={{ position: 'absolute', top: 0, right: 0 }}>
-        {`pos: ${JSON.stringify(pos)}`} {`zoom: ${zoom}`}
-      </div>
-      <div style={{ position: 'absolute', bottom: 0, right: 0 }}>
+      <span style={{ top: pos.y, left: pos.x, fontSize: `${4 * zoom}em` }}>
+        🐠 
+      </span>
+      <aside>
+        {`Position: ${JSON.stringify(pos)}`} {`Zoom: ${zoom}`}
+      </aside>
+      <footer>
         <button onClick={moveRight}> {'>'} </button>
         <button onClick={moveLeft}> {'<'} </button>
         <button onClick={moveDown}> {'v'} </button>
@@ -30,7 +29,7 @@ export const UseStateFunctionalUpdatesObject3 = () => {
 
         <button onClick={zoomIn}> + </button>
         <button onClick={zoomOut}> - </button>
-      </div>
+      </footer>
     </>
   )
 };

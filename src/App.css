@@ -1,4 +1,4 @@
-.App {
+.app {
   text-align: center;
   font-size: 4vh;
   line-height: 7vh;
@@ -6,12 +6,38 @@
 
 a { display: block }
 
-button { width: 25vh; font-size: inherit; height: inherit; line-height: inherit; box-sizing: border-box; outline: none; border: 1px solid gray }
+
+input { width: 60vw; font-size: inherit; height: inherit; line-height: inherit; box-sizing: border-box; outline: none; border: 1px solid gray }
+textarea { width: 60vw; min-height: 30vh; vertical-align: top; font-size: inherit; height: inherit; line-height: inherit; box-sizing: border-box; outline: none; border: 1px solid gray }
+label { display: inline-block; width: 30vw; text-align: right; padding-right: 3vw; box-sizing: border-box; outline: none }
+
+button { width: 20vw; font-size: inherit; height: inherit; line-height: inherit; box-sizing: border-box; outline: none; border: 1px solid gray }
+button:active { border: 1px solid orange }
 button.heavy { border: 3px solid gray }
 button.heavy:active { border: 3px solid orange }
+button.halfInput { width: 30vw }
+button.fullInput { width: 60vw }
 
-input { width: 50vw; font-size: inherit; height: inherit; line-height: inherit; box-sizing: border-box; outline: none; border: 1px solid gray }
+footer { position: absolute; bottom: 0; right: 0; }
+footer button { width: 15vw; }
 
-textarea { width: 50vw; min-height: 30vh; vertical-align: top; font-size: inherit; height: inherit; line-height: inherit; box-sizing: border-box; outline: none; border: 1px solid gray }
+span { position: absolute; transform: scale(-1, 1); font-size: 4em; line-height: 1; }
+aside { position: absolute; top: 0; right: 0; }
 
-label { display: inline-block; width: 20vw; box-sizing: border-box; outline: none }
+ul { text-align: left; padding: 0; margin-left: 20vw }
+li { margin: 0 auto; width: 60vw; }
+
+div.nolabel { padding-left: 30vw }
+.add input { width: 40vw }
+.add button { width: 20vw }
+
+.dark { background-color: darkcyan; color: #fdd657; }
+.dark input { background-color: skyblue; color: darkcyan; border: 1px solid #fdd657; }
+button.dark { border: 1px solid #fdd657; }
+.light { background-color: #fdfa57; color:darkcyan }
+.light input { background-color: skyblue; color: #fdfa57; border: 1px solid darkcyan; }
+button.light { border: 1px solid darkcyan; }
+
+
+
+div.text { display: inline-block; width: 60vw }

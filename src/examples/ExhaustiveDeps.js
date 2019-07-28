@@ -9,10 +9,8 @@ export const ExhaustiveDeps = () => {
 
   return (
     <div>
-      Count #1:
-      <button onClick={() => setCount(count + 1)} >
-        {count}
-      </button>
+      <label>Count #1: </label>
+      <button onClick={() => setCount(count + 1)}>{count}</button>
     </div>
   )
 };
