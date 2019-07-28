@@ -6,8 +6,8 @@ export const ThemedCard = () => {
   const theme = useContext(ThemeContext);
 
   return (
-    <span className={theme} style={{top: 'calc(50% - 4vh)'}}>
-      🐠
+    <span className={`emoji ${theme}`} style={{top: 'calc(50% - 4vh)'}}>
+      🎣
     </span>
   );
 }

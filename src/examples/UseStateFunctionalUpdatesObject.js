@@ -9,8 +9,8 @@ export const UseStateFunctionalUpdatesObject = () => {
 
   return (
     <>
-      <span style={{ top: pos.top, left: pos.left }}> 🐠 </span>
-      <aside>{`Position: ${JSON.stringify(pos)}`}</aside>
+      <span className="emoji" style={{ top: pos.top, left: pos.left }}> 🐠 </span>
+      <aside>{`Position: ${JSON.stringify(pos, null, 2)}`}</aside>
       <footer>
         <button onClick={() => setPos(
           prevPos => (

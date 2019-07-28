@@ -13,16 +13,16 @@ export const UseStateFunctionalUpdatesObject2 = () => {
   const moveUp = () => setState(prevState => ({ ...prevState, y: prevState.y - 10 }));
   const moveDown = () => setState(prevState => ({ ...prevState, y: prevState.y + 10 }));
 
-  const zoomIn = () => setState(prevState => ({ ...prevState, zoom: prevState.zoom * 1.05 }));
-  const zoomOut = () => setState(prevState => ({ ...prevState, zoom: prevState.zoom * 0.95 }));
+  const zoomIn = () => setState(prevState => ({ ...prevState, zoom: (prevState.zoom * 1.05).toFixed(2) }));
+  const zoomOut = () => setState(prevState => ({ ...prevState, zoom: (prevState.zoom * 0.95).toFixed(2) }));
 
   return (
     <>
-      <span style={{ top: state.y, left: state.x, fontSize: `${4 * state.zoom}em` }}>
+      <span className="emoji" style={{ top: state.y, left: state.x, fontSize: `${4 * state.zoom}em` }}>
         🐠
       </span>
       <aside>
-        {`State: ${JSON.stringify(state)}`}
+        {`State: ${JSON.stringify(state, null, 2)}`}
       </aside>
       <footer>
         <button onClick={moveRight}> {'>'} </button>

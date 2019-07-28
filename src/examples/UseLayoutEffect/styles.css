@@ -1,0 +1,65 @@
+.uleContainer {
+  display: flex;
+  justify-content: center;
+  max-width: 90vh;
+  padding: 60px 30px;
+  margin: auto;
+}
+
+.uleInputGroup {
+  display: flex;
+  flex-flow: wrap row;
+  position: relative;
+}
+.uleInputGroup label,
+.uleInputGroup input {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.uleLabel {
+  display: block;
+  border: none;
+  font-size: 3px;     /* make DOM manipulation obvious */
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  font-weight: 300;
+  color: #8F8F8F;
+  z-index: -1;
+  transition: all 0.2s ease;
+  text-align: left;
+  padding: 0;
+  width: 80%;
+}
+.uleActive .uleLabel {
+  font-weight: 300;
+  color: #8F8F8F;
+  font-size: 22px;
+  transform: translateY(-55px);
+}
+
+.uleInput {
+  font-size: 48px;
+  font-weight: 500;
+  color: #8F8F8F;
+  border-radius: 2px;
+  padding-left: 2px;
+  border: none;
+  width: 80%;
+  background: rgba(0, 0, 0, 0);
+  overflow-x: hidden;
+}
+.uleInput:focus {
+  outline: 0;
+  border: 0;
+}
+
+.uleBorder {
+  border-bottom: 1px solid red;
+  width: 35%;
+  transition: width .2s ease;
+}
+.uleActive .uleBorder {
+  width: 100%;
+}

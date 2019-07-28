@@ -10,16 +10,16 @@ export const UseStateFunctionalUpdatesObject3 = () => {
   const moveUp = () => setPos(prev => ({ ...prev, y: prev.y - 10 }));
   const moveDown = () => setPos(prev => ({ ...prev, y: prev.y + 10 }));
 
-  const zoomIn = () => setZoom(prev => prev * 1.05);
-  const zoomOut = () => setZoom(prev => prev * 0.95);
+  const zoomIn = () => setZoom(prev => (prev * 1.05).toFixed(2));
+  const zoomOut = () => setZoom(prev => (prev * 0.95).toFixed(2));
 
   return (
     <>
-      <span style={{ top: pos.y, left: pos.x, fontSize: `${4 * zoom}em` }}>
+      <span className="emoji" style={{ top: pos.y, left: pos.x, fontSize: `${4 * zoom}em` }}>
         🐠 
       </span>
       <aside>
-        {`Position: ${JSON.stringify(pos)}`} {`Zoom: ${zoom}`}
+        {`Position: ${JSON.stringify(pos, null, 2)}`} {`Zoom: ${zoom}`}
       </aside>
       <footer>
         <button onClick={moveRight}> {'>'} </button>
