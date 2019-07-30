@@ -30,12 +30,12 @@ export class SeparationOfConcernsClass extends React.Component {
     window.removeEventListener('resize', this.handleResize);
   }
 
-  handleNameChange(name) {
-    this.setState({ name });
+  handleNameChange(e) {
+    this.setState({ name: e.target.value });
   }
 
-  handleSurnameChange(surname) {
-    this.setState({ surname });
+  handleSurnameChange(e) {
+    this.setState({ surname: e.target.value });
   }
 
   handleResize() {

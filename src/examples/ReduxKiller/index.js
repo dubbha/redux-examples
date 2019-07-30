@@ -32,7 +32,7 @@ export const ReduxKiller = () => {
 }
 
   
-const DeepTree = ({ todos }) => (
+const DeepTree = () => (
   <div className="deepTree">
     <div>DeepTree</div>
     <Deep />

@@ -1,5 +1,4 @@
 import React, { useReducer } from 'react';
-// import { someExpensiveComputation } from './utils';
 
 const initialState = {count: 0};
 
