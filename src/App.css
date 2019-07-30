@@ -4,7 +4,9 @@
   line-height: 7vh;
 }
 
-a { display: block }
+a { display: block; color: dimgray }
+/* a:visited { color: lightgray } */
+a:hover { background-color: lightgray; color: dimgray }
 
 input { width: 60vw; font-size: inherit; height: inherit; line-height: inherit; box-sizing: border-box; outline: none; border: 1px solid gray }
 input[type="radio"] { width: 4vw; height: 4vh; vertical-align: text-bottom; }
@@ -21,7 +23,7 @@ button.fullInput { width: 60vw }
 footer { position: absolute; bottom: 0; right: 0; }
 footer button { width: 16.6667vw; }
 
-.emoji { position: absolute; transform: scale(-1, 1); font-size: 6rem; line-height: 1; top: 25vh; left: 25vh; }
+.emoji { position: absolute; transform: scale(-1, 1); font-size: 6rem; line-height: 1; top: calc(50vh - 3rem); left: calc(50vw - 3rem); }
 aside { position: absolute; top: 0; right: 0; }
 
 ul { text-align: left; padding: 0; margin-left: 20vw }
@@ -40,3 +42,9 @@ button.dark { border: 1px solid #fdd657; }
 button.light { border: 1px solid darkcyan; }
 
 div.text { display: inline-block; width: 60vw }
+
+.deepTree { background-color: #c5c5c5 }
+.deep { background-color: #a4a4a4 }
+.deeper { background-color: #858585 }
+.evenDeeper { background-color: #707070 }
+.deepTree, .deep, .deeper, .evenDeeper { padding: 5px }

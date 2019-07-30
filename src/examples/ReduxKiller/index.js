@@ -1,5 +1,4 @@
 import React, { useReducer, useState, useContext } from 'react';
-import './styles.css';
 
 const TodosDispatchContext = React.createContext(null);
 const TodosStateContext = React.createContext(null);
