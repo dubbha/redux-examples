@@ -5,10 +5,10 @@ import {
   useLocation,
   useParams,
   useRouteMatch,
-  // useHistory,            // actually don't, to be replaced by useNavigate
+  // useHistory,     // actually don't use yet, to be replaced by useNavigate
 } from 'react-router-dom';
 
-export const LibsApiRouter = ({ match: { path } }) => (
+export const ReactRouterApiHooks = ({ match: { path } }) => (
   <>
     <nav>
       <NavLink exact to={`${path}/`}>Home</NavLink>

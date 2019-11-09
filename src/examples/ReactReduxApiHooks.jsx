@@ -1,26 +1,31 @@
 import React, { useState } from 'react';
-import { createStore } from 'redux'
-import { Provider, useSelector, useDispatch } from 'react-redux'
+import { createStore } from 'redux';
+import { Provider, useSelector, useDispatch } from 'react-redux';
 
-const todosInitialState = [
-  { text: 'Learn Hooks' },
-  { text: 'Spread the News' },
-];
+const initialState = {
+  todos: [
+    { text: 'Learn Hooks' },
+    { text: 'Spread the News' },
+  ]
+};
 
-const todosReducer = (state = todosInitialState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'add':
-      return [...state, { text: action.text }];
-    case 'remove':
-      return [...state.filter(todo => todo.text !== action.text)];
+      return {
+        todos: [
+          ...state.todos,
+          { text: action.text }
+        ]
+      };
     default:
       return state;
   }
 };
 
-const store = createStore(todosReducer);
+const store = createStore(reducer);
 
-export const LibsApiRedux = () => (
+export const ReactReduxApiHooks = () => (
   <Provider store={store}>
     <DeepTree />
   </Provider>
@@ -35,7 +40,7 @@ const DeepTree = () => (
 );
 
 const Deep = () => {
-  const todos = useSelector(store => store);
+  const todos = useSelector(store => store.todos);
 
   return (
     <div className="deep">
