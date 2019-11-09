@@ -42,4 +42,6 @@ export * from './CustomUseInitialRender';
 export * from './CustomUseCookie';
 export * from './CustomUseCookieWithReload';
 export * from './CustomUseDebounce';
-export * from './ReduxKiller/index';
+export * from './ReduxKiller';
+export * from './ReactReduxApiHooks';
+export * from './ReactRouterApiHooks';

@@ -1,26 +1,31 @@
-import React, { useReducer, useState, useContext } from 'react';
+import React, { useReducer, useContext, useState } from 'react';
 
 const TodosDispatchContext = React.createContext(null);
 const TodosStateContext = React.createContext(null);
 
-const todosInitialState = [
-  { text: 'Learn Hooks' },
-  { text: 'Spread the News' },
-];
+const initialState = {
+  todos: [
+    { text: 'Learn Hooks' },
+    { text: 'Spread the News' },
+  ]
+};
 
-const todosReducer = (state, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'add':
-      return [...state, { text: action.text }];
-    case 'remove':
-      return [...state.filter(todo => todo.text !== action.text)];
+      return {
+        todos: [
+          ...state.todos,
+          { text: action.text }
+        ]
+      };
     default:
       return state;
   }
 };
 
 export const ReduxKiller = () => {
-  const [todos, dispatch] = useReducer(todosReducer, todosInitialState);
+  const [todos, dispatch] = useReducer(reducer, initialState);
 
   return (
     <TodosStateContext.Provider value={todos}>
@@ -40,7 +45,7 @@ const DeepTree = () => (
 );
 
 const Deep = () => {
-  const todos = useContext(TodosStateContext);
+  const { todos } = useContext(TodosStateContext);
   return (
     <div className="deep">
       <div>Deep</div>
