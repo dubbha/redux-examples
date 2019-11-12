@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react';
 
-const initialState = {count: 0};
+const initialState = { count: 0 };
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -9,7 +9,7 @@ const reducer = (state, action) => {
     case 'decrement':
       return {count: state.count - 1};
     default:
-      throw new Error('unknown action type');
+      return state;
   }
 }
 
@@ -18,8 +18,8 @@ export const UseReducer = () => {
   return (
     <>
       <label>Count: {state.count} </label>
-      <button onClick={() => dispatch({type: 'increment'})}>+</button>
-      <button onClick={() => dispatch({type: 'decrement'})}>-</button>
+      <button onClick={() => dispatch({ type: 'increment' })}> + </button>
+      <button onClick={() => dispatch({ type: 'decrement' })}> - </button>
     </>
   );
 }

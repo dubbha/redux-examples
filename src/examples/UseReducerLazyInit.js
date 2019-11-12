@@ -2,19 +2,19 @@ import React, { useReducer } from 'react';
 import { someExpensiveComputation } from './utils';
 
 const init = n => {
-  return {count: someExpensiveComputation(n)};
+  return { count: someExpensiveComputation(n) };
 }
 
 const reducer = (state, action) => {
   switch (action.type) {
     case 'increment':
-      return {count: state.count + 1};
+      return { count: state.count + 1 };
     case 'decrement':
-      return {count: state.count - 1};
+      return { count: state.count - 1 };
     case 'reset':
-      return init(action.payload)
+      return action.payload;
     default:
-      throw new Error('unknown action type');
+      return state;
   }
 }
 
@@ -23,7 +23,7 @@ export const UseReducerLazyInit = ({ initialArg = 30 }) => {  // n comes from pr
   return (
     <>
       <label>Count: {state.count} </label>
-      <button onClick={() => dispatch({ type: 'reset', payload: initialArg })}> Reset </button>
+      <button onClick={() => dispatch({ type: 'reset', payload: init(initialArg) })}> Reset </button>
       <button onClick={() => dispatch({ type: 'increment' })}> + </button>
       <button onClick={() => dispatch({ type: 'decrement' })}> - </button>
     </>

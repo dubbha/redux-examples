@@ -7,7 +7,7 @@ export const UseMemo = () => {
   
   const memoizedValue = useMemo(
     () => someExpensiveComputation(n),
-    [n]
+    [n],
   );
 
   useEffect(() => { console.log(`value changed: ${memoizedValue}`) }, [memoizedValue]);
@@ -17,7 +17,7 @@ export const UseMemo = () => {
   return (
     <>
       <label>n: </label>
-      <input value={n} onChange={e => { setN(e.target.value); setRes('?'); }} type="number" min={0} />
+      <input value={n} onChange={e => { setN(Number(e.target.value)); setRes('?'); }} type="number" min={0} />
 
       <div>
         <label>fib(n): </label>

@@ -16,7 +16,7 @@ export const UseStateManyStates = () => {
     <>
       <div>
         <label>Age: </label>
-        <input value={age} onChange={e => setAge(e.target.value)} type="number" />
+        <input value={age} onChange={e => setAge(Number(e.target.value))} type="number" />
       </div>
       <div>
         <label>Fruit: </label>

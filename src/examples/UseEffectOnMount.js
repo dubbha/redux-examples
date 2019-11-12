@@ -4,7 +4,7 @@ export const UseEffectOnMount = () => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    console.log(`componentDidMount`);
+    console.log('componentDidMount');
   }, []);  // only fire once on mount, like componentDidMount
 
   const [text, setText] = useState('change me to trigger re-render');

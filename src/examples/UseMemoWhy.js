@@ -14,7 +14,7 @@ export const UseMemoWhy = () => {
   return (
     <>
       <label>n: </label>
-      <input value={n} onChange={e => { setN(e.target.value); setRes('?'); }} type="number" min={0} />
+      <input value={n} onChange={e => { setN(Number(e.target.value)); setRes('?'); }} type="number" min={0} />
 
       <div className="nolabel">
         <button onClick={() => setRes(value)} className="heavy fullInput">
