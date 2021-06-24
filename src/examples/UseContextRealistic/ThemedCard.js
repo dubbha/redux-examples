@@ -7,7 +7,7 @@ export const ThemedCard = () => {
 
   return (
     <span className={`emoji ${theme}`}>
-      🐠 
+      🐠
     </span>
   );
 }
